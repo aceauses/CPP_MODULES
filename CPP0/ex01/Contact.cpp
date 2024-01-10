@@ -6,55 +6,58 @@
 /*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:32:31 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/09 19:43:59 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/10 17:22:16 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
+Contact::Contact() {};
+Contact::~Contact() {};
+
 std::string	Contact::GetFirstName()
 {
-	return (this->_first_name);
+	return (this->_FirstName);
 }
 
 std::string	Contact::GetLastName()
 {
-	return (this->_last_name);
+	return (this->_LastName);
 }
 
 std::string	Contact::GetNickName()
 {
-	return (this->_nickname);
+	return (this->_Nickname);
 }
 
 std::string	Contact::GetPhone()
 {
-	return (this->_phone);
+	return (this->_Phone);
 }
 std::string	Contact::GetSecret()
 {
-	return (this->_secret);
+	return (this->_Secret);
 }
 
 void	Contact::SetFirstName(std::string Name)
 {
-	this->_first_name = Name;
+	this->_FirstName = Name;
 }
 
 void	Contact::SetLastName(std::string Name)
 {
-	this->_last_name = Name;
+	this->_LastName = Name;
 }
 
 void	Contact::SetNickName(std::string Nick)
 {
-	this->_nickname = Nick;
+	this->_Nickname = Nick;
 }
 void	Contact::SetPhone(std::string Phone)
 {
-	this->_nickname = Phone;
+	this->_Phone = Phone;
 }
 void	Contact::SetSecret(std::string Secret)
 {
-	this->_nickname = Secret;
+	this->_Secret = Secret;
 }

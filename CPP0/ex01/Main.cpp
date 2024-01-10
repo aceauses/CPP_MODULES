@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:00:27 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/09 19:17:50 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/10 17:41:37 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 int	main(void)
 {
-	std::string UserInput;
-	
+	std::string	UserInput;
+	PhoneBook	phoneBook;
+	int			i = 1;
+
 	while (1)
 	{
 		std::cout << "Command: ";
 		if (!std::getline(std::cin, UserInput))
 			break;
 		if (UserInput == "ADD")
-			std::cout << "User want to Add " << std::endl;
+			phoneBook.add(&i);
 		if (UserInput == "SEARCH")
-			std::cout << "User want to Search " << std::endl;
+			phoneBook.search();
+		if (UserInput == "EXIT")
+			break ;
 	}
 	std::cout << std::endl;
 }

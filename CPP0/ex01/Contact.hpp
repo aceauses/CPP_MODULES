@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:01:24 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/09 19:44:05 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/10 17:16:32 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,22 @@
 class	Contact
 {
 	private:
-		std::string	_first_name;
-		std::string	_last_name;
-		std::string	_nickname;
-		std::string	_phone;
-		std::string	_secret;
+		std::string	_FirstName;
+		std::string	_LastName;
+		std::string	_Nickname;
+		std::string	_Phone;
+		std::string	_Secret;
 	public:
-		std::string	Contact::GetFirstName();
-		std::string	Contact::GetLastName();
-		std::string	Contact::GetNickName();
-		std::string	Contact::GetPhone();
-		std::string	Contact::GetSecret();
-		void	Contact::SetFirstName(std::string Name);
-		void	Contact::SetLastName(std::string Name);
-		void	Contact::SetNickName(std::string Nick);
-		void	Contact::SetPhone(std::string Nick);
-		void	Contact::SetSecret(std::string Secret);
+		Contact();
+		~Contact();
+		std::string	GetFirstName();
+		std::string	GetLastName();
+		std::string	GetNickName();
+		std::string	GetPhone();
+		std::string	GetSecret();
+		void		SetFirstName(std::string Name);
+		void		SetLastName(std::string Name);
+		void		SetNickName(std::string Nick);
+		void		SetPhone(std::string Nick);
+		void		SetSecret(std::string Secret);
 };
