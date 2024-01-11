@@ -14,16 +14,18 @@ CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = phonebook
 SRCS = Contact.cpp PhoneBook.cpp Main.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME) 
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) 
 
 clean:
-	rm -rf $(NAME)
+	rm -rf $(OBJS)
 
 fclean: clean
+	rm -rf $(NAME)
 
 re: fclean all
 .PHONY: all clean fclean re

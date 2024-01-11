@@ -56,9 +56,9 @@ void	PhoneBook::search(void)
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << std::setw(10) << i + 1 << "|";
-		std::cout << std::setw(10) << this->Contacts[i].GetFirstName().substr(0, 8) << "|";
-		std::cout << std::setw(10) << this->Contacts[i].GetLastName() << "|";
-		std::cout << std::setw(10) << this->Contacts[i].GetNickName() << std::endl;
+		std::cout << std::setw(10) << this->Contacts[i].ShowFirstName() << "|";
+		std::cout << std::setw(10) << this->Contacts[i].ShowLastName() << "|";
+		std::cout << std::setw(10) << this->Contacts[i].ShowNickName() << std::endl;
 	}
 	std::cout << "Index: ";
 	if (!std::getline(std::cin, Input))

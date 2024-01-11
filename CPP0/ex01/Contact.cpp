@@ -61,3 +61,27 @@ void	Contact::SetSecret(std::string Secret)
 {
 	this->_Secret = Secret;
 }
+
+std::string	Contact::ShowFirstName()
+{
+	if (this->_FirstName.length() > 10)
+		return (this->_FirstName.substr(0, 9) + ".");
+	else
+		return (this->_FirstName);
+}
+
+std::string	Contact::ShowLastName()
+{
+	if (this->_LastName.length() > 10)
+		return (this->_LastName.substr(0, 9) + ".");
+	else
+		return (this->_LastName);
+}
+
+std::string	Contact::ShowNickName()
+{
+	if (this->_Nickname.length() > 10)
+		return (this->_Nickname.substr(0, 9) + ".");
+	else
+		return (this->_Nickname);
+}

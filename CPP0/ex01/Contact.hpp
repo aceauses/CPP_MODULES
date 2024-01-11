@@ -34,4 +34,7 @@ class	Contact
 		void		SetNickName(std::string Nick);
 		void		SetPhone(std::string Nick);
 		void		SetSecret(std::string Secret);
+		std::string	ShowFirstName();
+		std::string	ShowLastName();
+		std::string	ShowNickName();
 };
