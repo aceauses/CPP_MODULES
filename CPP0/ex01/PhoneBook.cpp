@@ -12,43 +12,74 @@
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() {};
-PhoneBook::~PhoneBook() {};
+PhoneBook::PhoneBook(){};
+PhoneBook::~PhoneBook(){};
 
-void	PhoneBook::add(int *number)
+void PhoneBook::add(int *number)
 {
 	std::string Input;
 
 	while (1)
 	{
 		std::cout << "First Name: ";
-		if (!std::getline(std::cin, Input))
+		if (!std::getline(std::cin, Input) || Input.empty())
+			std::cout << "Invalid input. Please try again.\n";
+		else
+		{
+			this->Contacts[*number - 1].SetFirstName(Input);
 			break;
-		this->Contacts[*number - 1].SetFirstName(Input);
-		std::cout << "Last Name: ";
-		if (!std::getline(std::cin, Input))
-			break;
-		this->Contacts[*number - 1].SetLastName(Input);
-		std::cout << "Nickname: ";
-		if (!std::getline(std::cin, Input))
-			break;
-		this->Contacts[*number - 1].SetNickName(Input);
-		std::cout << "Phone: ";
-		if (!std::getline(std::cin, Input))
-			break;
-		this->Contacts[*number - 1].SetPhone(Input);
-		std::cout << "Secret: ";
-		if (!std::getline(std::cin, Input))
-			break;
-		this->Contacts[*number - 1].SetSecret(Input);
-		*number += 1;
-		if (*number > 8)
-			*number = 1;
-		break;
+		}
 	}
+	while (1)
+	{
+		std::cout << "Last Name: ";
+		if (!std::getline(std::cin, Input) || Input.empty())
+			std::cout << "Invalid input. Please try again.\n";
+		else
+		{
+			this->Contacts[*number - 1].SetLastName(Input);
+			break;
+		}
+	}
+	while (1)
+	{
+		std::cout << "Nickname: ";
+		if (!std::getline(std::cin, Input) || Input.empty())
+			std::cout << "Invalid input. Please try again.\n";
+		else
+		{
+			this->Contacts[*number - 1].SetNickName(Input);
+			break;
+		}
+	}
+	while (1)
+	{
+		std::cout << "Phone: ";
+		if (!std::getline(std::cin, Input) || Input.empty())
+			std::cout << "Invalid input. Please try again.\n";
+		else
+		{
+			this->Contacts[*number - 1].SetPhone(Input);
+			break;
+		}
+	}
+	while (1)
+	{
+		std::cout << "Secret: ";
+		if (!std::getline(std::cin, Input) || Input.empty())
+			std::cout << "Invalid input. Please try again.\n";
+		else
+		{
+			this->Contacts[*number - 1].SetSecret(Input);
+			break;
+		}
+	}
+	*number += 1;
+	if (*number > 8)
+		*number = 1;
 }
 
-void	PhoneBook::search(void)
+void PhoneBook::search(void)
 {
 	std::string Input;
 
@@ -62,7 +93,7 @@ void	PhoneBook::search(void)
 	}
 	std::cout << "Index: ";
 	if (!std::getline(std::cin, Input))
-		return ;
+		return;
 	if (Input.length() == 1 && Input[0] >= '1' && Input[0] <= '8')
 	{
 		std::cout << "First Name: " << this->Contacts[Input[0] - '0' - 1].GetFirstName() << std::endl;
