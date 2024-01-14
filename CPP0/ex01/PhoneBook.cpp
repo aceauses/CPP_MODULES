@@ -79,12 +79,12 @@ void PhoneBook::add(int *number)
 		*number = 1;
 }
 
-void PhoneBook::search(void)
+void PhoneBook::search(int *number)
 {
 	std::string Input;
 
 	std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; this->Contacts[i].GetFirstName() != "" && i < 8; i++)
 	{
 		std::cout << std::setw(10) << i + 1 << "|";
 		std::cout << std::setw(10) << this->Contacts[i].ShowFirstName() << "|";

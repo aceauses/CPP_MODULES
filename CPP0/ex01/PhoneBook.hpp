@@ -25,5 +25,5 @@ class PhoneBook
 		PhoneBook();
 		~PhoneBook();
 		void	add(int *number);
-		void	search(void);
+		void	search(int *number);
 };

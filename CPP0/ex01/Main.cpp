@@ -26,7 +26,7 @@ int	main(void)
 		if (UserInput == "ADD")
 			phoneBook.add(&i);
 		if (UserInput == "SEARCH")
-			phoneBook.search();
+			phoneBook.search(&i);
 		if (UserInput == "EXIT")
 			break ;
 	}
