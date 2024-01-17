@@ -83,6 +83,11 @@ void PhoneBook::search(int *number)
 {
 	std::string Input;
 
+	if (this->Contacts[0].GetFirstName() == "")
+	{
+		std::cout << "No contacts to show." << std::endl;
+		return;
+	}
 	std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
 	for (int i = 0; this->Contacts[i].GetFirstName() != "" && i < 8; i++)
 	{
