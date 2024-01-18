@@ -19,17 +19,9 @@
 
 int	main(void)
 {
-<<<<<<< HEAD:CPP1/ex00/main.cpp
 	Zombie* zombie1 = newZombie("Zombie1");
 	zombie1->announce();
 	randomChump("Zombie2");
 	delete zombie1;
 	return (0);
-=======
-	// Zombie* zombie1 = newZombie("Zombie1");
-	// zombie1->announce();
-	// randomChump("Zombie2");
-	// delete zombie1;
-	// return (0);
->>>>>>> 803a2311d8965d211b8ff36258bb01799bc4d396:CPP1/ex01/main.cpp
 }
