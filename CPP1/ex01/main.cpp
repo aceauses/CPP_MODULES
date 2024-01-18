@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 12:34:31 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/18 12:56:02 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/16 16:03:22 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/18 13:13:19 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <iostream>
 
-void randomChump( std::string name )
+int	main(void)
 {
-	Zombie zombie(name);
-	zombie.announce();
+	// Zombie* zombie1 = newZombie("Zombie1");
+	// zombie1->announce();
+	// randomChump("Zombie2");
+	// delete zombie1;
+	// return (0);
 }
