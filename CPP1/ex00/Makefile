@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+         #
+#    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/05 23:13:47 by aceauses          #+#    #+#              #
-#    Updated: 2024/01/10 17:19:48 by aceauses         ###   ########.fr        #
+#    Updated: 2024/01/18 16:44:59 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = phonebook
-SRCS = Contact.cpp PhoneBook.cpp Main.cpp
+NAME = graveyard
+SRCS = newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

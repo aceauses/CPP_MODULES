@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:05:31 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/16 16:06:24 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/18 16:39:01 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 Zombie* newZombie(std::string name)
 {
-	Zombie *Zombie = new Zombie();
-	
+	Zombie *Zombie = new Zombie(name);
+	return (Zombie);
 }
