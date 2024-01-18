@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:04:11 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/16 16:06:59 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:19:54 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ Zombie::Zombie(/* args */)
 {
 }
 
-Zombie::~Zombie()
+Zombie::~Zombie(std::string name)
 {
-	std::cout << "Zombie died." << std::endl;
+	std::cout << name << "Zombie died." << std::endl;
 }
 
 void Zombie::announce(void)

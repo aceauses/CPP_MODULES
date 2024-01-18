@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:03:37 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/16 16:04:53 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/18 13:19:39 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 class Zombie
 {
 	private:
-		/* data */
+		std::string _name;
 	public:
 		Zombie(/* args */);
 		~Zombie();
-		void announce(void);
+		void announce(std::string name);
 };
