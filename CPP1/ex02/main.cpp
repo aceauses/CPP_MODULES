@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 16:03:22 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/18 17:57:38 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/18 17:58:16 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/18 18:11:09 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 #include <iostream>
 
 int	main(void)
 {
-	int N = 10;
-	Zombie *horde = zombieHorde(N, "Zombie");
-	int i = 0;
+	std::string brain = "HI THIS IS BRAIN";
+	std::string *brainPtr = &brain;
+	std::string &brainRef = brain;
 
-	while (i < N)
-	{
-		horde[i].announce();
-		i++;
-	}
-	delete []horde;
+	std::cout << "Memory String: " << &brain << std::endl;
+	std::cout << "Memory Pointer: " << &*brainPtr << std::endl;
+	std::cout << "Memory Ref: " << &brainRef << std::endl;
+	std::cout << std::endl;
+	std::cout << "Value String: " << brain << std::endl;
+	std::cout << "Value Pointer: " << *brainPtr << std::endl;
+	std::cout << "Value Ref: " << brainRef << std::endl;
 	return (0);
 }

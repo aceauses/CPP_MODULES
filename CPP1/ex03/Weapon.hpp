@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 16:03:22 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/18 17:57:38 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/18 18:12:38 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/19 16:12:50 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma	once
 #include <iostream>
 
-int	main(void)
+class Weapon
 {
-	int N = 10;
-	Zombie *horde = zombieHorde(N, "Zombie");
-	int i = 0;
-
-	while (i < N)
-	{
-		horde[i].announce();
-		i++;
-	}
-	delete []horde;
-	return (0);
-}
+private:
+	/* data */
+	std::string _type;
+public:
+	Weapon(std::string type);
+	~Weapon();
+	void setType(std::string type);
+	const std::string& getType(void);
+};

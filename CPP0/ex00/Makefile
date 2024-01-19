@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+         #
+#    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/05 23:13:47 by aceauses          #+#    #+#              #
-#    Updated: 2024/01/05 23:14:39 by aceauses         ###   ########.fr        #
+#    Updated: 2024/01/19 16:51:19 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = megaphone
 SRCS = megaphone.cpp

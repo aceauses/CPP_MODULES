@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/05 23:13:47 by aceauses          #+#    #+#              #
+#    Created: 2024/01/18 17:57:57 by aceauses          #+#    #+#              #
 #    Updated: 2024/01/19 16:51:19 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = graveyard
-SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+NAME = brain
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

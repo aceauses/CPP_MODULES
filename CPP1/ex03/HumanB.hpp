@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 16:03:22 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/18 17:57:38 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/18 18:12:30 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/19 16:28:12 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
+#include "Weapon.hpp"
 #include <iostream>
 
-int	main(void)
+class HumanB
 {
-	int N = 10;
-	Zombie *horde = zombieHorde(N, "Zombie");
-	int i = 0;
-
-	while (i < N)
-	{
-		horde[i].announce();
-		i++;
-	}
-	delete []horde;
-	return (0);
-}
+private:
+	/* data */
+	std::string _name;
+	Weapon*		_weapon;
+public:
+	HumanB(std::string name);
+	~HumanB();
+	void	attack(void);
+	void	setWeapon(Weapon& weapon);
+};

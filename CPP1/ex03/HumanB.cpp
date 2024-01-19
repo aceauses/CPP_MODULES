@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 16:03:22 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/18 17:57:38 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/18 18:12:22 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/19 16:32:14 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
+#include "HumanB.hpp"
 
-int	main(void)
+HumanB::HumanB(std::string name) : _weapon(NULL)
 {
-	int N = 10;
-	Zombie *horde = zombieHorde(N, "Zombie");
-	int i = 0;
+	this->_name = name;
+}
 
-	while (i < N)
-	{
-		horde[i].announce();
-		i++;
-	}
-	delete []horde;
-	return (0);
+HumanB::~HumanB()
+{
+}
+
+void	HumanB::attack(void)
+{
+	if (!this->_weapon)
+		std::cout << this->_name << " has no weapon" << std::endl;
+	else
+		std::cout << this->_name << " attacks with " << this->_weapon->getType() << std::endl;
+}
+
+void	HumanB::setWeapon(Weapon& weapon)
+{
+	this->_weapon = &weapon;
 }
