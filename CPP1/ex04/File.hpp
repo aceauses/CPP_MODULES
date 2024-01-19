@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:07:18 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/19 18:08:35 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/19 19:48:08 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FILE_HPP
 
 # include <iostream>
+# include <fstream>
+# include <string>
 
 class File
 {
@@ -22,6 +24,7 @@ private:
 public:
 	File(/* args */);
 	~File();
+	void	readFile(std::string filename);
 };
 
 #endif

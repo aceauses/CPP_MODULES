@@ -6,14 +6,14 @@
 #    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/05 23:13:47 by aceauses          #+#    #+#              #
-#    Updated: 2024/01/19 16:50:40 by aceauses         ###   ########.fr        #
+#    Updated: 2024/01/19 19:59:31 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = humans
-SRCS = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
+NAME = replace
+SRCS = File.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
