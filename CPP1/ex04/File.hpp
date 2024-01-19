@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:07:18 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/19 19:48:08 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/19 22:57:06 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ private:
 public:
 	File(/* args */);
 	~File();
-	void	readFile(std::string filename);
+	void	replace(std::string filename, std::string s1, std::string s2);
 };
 
 #endif

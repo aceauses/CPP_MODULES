@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:07:24 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/19 19:51:10 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/19 22:57:24 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	File file;
-	file.readFile(argv[1]);
+	file.replace(argv[1], argv[2], argv[3]);
 	return (0);
 }
