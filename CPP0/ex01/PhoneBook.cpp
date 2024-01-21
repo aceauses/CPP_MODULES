@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:03:01 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/10 17:43:40 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/20 16:01:13 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ void PhoneBook::add(int *number)
 {
 	std::string Input;
 
-	while (1)
+	while (1 && !std::cin.eof())
 	{
 		std::cout << "First Name: ";
-		if (!std::getline(std::cin, Input) || Input.empty())
+		if (!std::getline(std::cin, Input) || Input.empty()
+			|| *Input.c_str() == '\t')
 			std::cout << "Invalid input. Please try again.\n";
 		else
 		{
@@ -30,10 +31,11 @@ void PhoneBook::add(int *number)
 			break;
 		}
 	}
-	while (1)
+	while (1 && !std::cin.eof())
 	{
 		std::cout << "Last Name: ";
-		if (!std::getline(std::cin, Input) || Input.empty())
+		if (!std::getline(std::cin, Input) || Input.empty()
+			|| *Input.c_str() == '\t')
 			std::cout << "Invalid input. Please try again.\n";
 		else
 		{
@@ -41,10 +43,11 @@ void PhoneBook::add(int *number)
 			break;
 		}
 	}
-	while (1)
+	while (1 && !std::cin.eof())
 	{
 		std::cout << "Nickname: ";
-		if (!std::getline(std::cin, Input) || Input.empty())
+		if (!std::getline(std::cin, Input) || Input.empty()
+			|| *Input.c_str() == '\t')
 			std::cout << "Invalid input. Please try again.\n";
 		else
 		{
@@ -52,10 +55,11 @@ void PhoneBook::add(int *number)
 			break;
 		}
 	}
-	while (1)
+	while (1 && !std::cin.eof())
 	{
 		std::cout << "Phone: ";
-		if (!std::getline(std::cin, Input) || Input.empty())
+		if (!std::getline(std::cin, Input) || Input.empty()
+			|| *Input.c_str() == '\t')
 			std::cout << "Invalid input. Please try again.\n";
 		else
 		{
@@ -63,10 +67,11 @@ void PhoneBook::add(int *number)
 			break;
 		}
 	}
-	while (1)
+	while (1 && !std::cin.eof())
 	{
 		std::cout << "Secret: ";
-		if (!std::getline(std::cin, Input) || Input.empty())
+		if (!std::getline(std::cin, Input) || Input.empty()
+			|| *Input.c_str() == '\t')
 			std::cout << "Invalid input. Please try again.\n";
 		else
 		{
