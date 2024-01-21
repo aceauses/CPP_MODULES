@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 15:01:49 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/20 15:21:52 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/21 14:21:50 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,11 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	if (level.empty())
+	fptr fptrs[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string levels[4] = {"debug", "info", "warning", "error"};
+	for (int i = 0; i < 4; i++)
 	{
-		std::cout << "Please specify a level " << std::endl;
-		return ;
+		if (levels[i] == level)
+			(this->*fptrs[i])();
 	}
-	else if (level == "debug")
-		this->debug();
-	else if (level == "info")
-		this->info();
-	else if (level == "warning")
-		this->warning();
-	else if (level == "error")
-		this->error();
-	else
-		std::cout << "Unknown level" << std::endl;
 }

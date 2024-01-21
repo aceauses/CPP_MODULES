@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 15:01:10 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/21 14:21:53 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/21 13:53:07 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/21 14:00:13 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 # include <iostream>
-# include <fstream>
 # include <string>
 
-class Harl
+class Fixed
 {
-private:
-	/* data */
-	void	debug(void);
-	void	info(void);
-	void	warning(void);
-	void	error(void);
-public:
-	Harl(/* args */);
-	~Harl();
-	void	complain(std::string level);
+	public:
+		// Constructors
+		Fixed();
+		Fixed(const Fixed &copy);
+		
+		// Destructor
+		~Fixed();
+		
+		// Operators
+		Fixed & operator=(const Fixed &assign);
+		float	toFloat(void) const;
+		int		toInt(void) const;
+	private:
+		
 };
-typedef void (Harl::*fptr)(void);
+
 #endif
