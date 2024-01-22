@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 19:00:27 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/20 16:01:14 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:44:20 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ int	main(void)
 			break;
 		if (UserInput == "ADD")
 			phoneBook.add(&i);
-		if (UserInput == "SEARCH")
+		else if (UserInput == "SEARCH")
 			phoneBook.search(&i);
-		if (UserInput == "EXIT")
+		else if (UserInput == "EXIT")
 			break ;
+		else
+			std::cout << "Command not found. Available commands: ADD, SEARCH, EXIT" << std::endl;
 	}
 	std::cout << std::endl;
 }

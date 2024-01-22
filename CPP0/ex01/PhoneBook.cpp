@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:03:01 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/20 16:01:13 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:39:41 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void PhoneBook::search(int *number)
 	std::cout << "Index: ";
 	if (!std::getline(std::cin, Input))
 		return;
-	if (Input.length() == 1 && Input[0] >= '1' && Input[0] <= '8')
+	if (Input.length() == 1 && Input[0] >= '1' && Input[0] <= '8' && this->Contacts[Input[0] - '0' - 1].GetFirstName() != "")
 	{
 		std::cout << "First Name: " << this->Contacts[Input[0] - '0' - 1].GetFirstName() << std::endl;
 		std::cout << "Last Name: " << this->Contacts[Input[0] - '0' - 1].GetLastName() << std::endl;
