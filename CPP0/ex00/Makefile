@@ -6,19 +6,19 @@
 #    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/05 23:13:47 by aceauses          #+#    #+#              #
-#    Updated: 2024/01/19 16:51:19 by aceauses         ###   ########.fr        #
+#    Updated: 2024/01/24 15:34:45 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = megaphone
 SRCS = megaphone.cpp
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)

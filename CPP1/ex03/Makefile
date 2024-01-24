@@ -6,12 +6,12 @@
 #    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/05 23:13:47 by aceauses          #+#    #+#              #
-#    Updated: 2024/01/19 16:50:40 by aceauses         ###   ########.fr        #
+#    Updated: 2024/01/24 15:34:45 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = humans
 SRCS = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
@@ -19,7 +19,7 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) 
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME) 
 
 clean:
 	rm -rf $(OBJS)

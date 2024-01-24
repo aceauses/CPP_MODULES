@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/05 23:13:47 by aceauses          #+#    #+#              #
-#    Updated: 2024/01/24 15:34:45 by aceauses         ###   ########.fr        #
+#    Created: 2024/01/20 15:11:36 by aceauses          #+#    #+#              #
+#    Updated: 2024/01/24 15:12:23 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = replace
-SRCS = File.cpp main.cpp
+NAME = ClapTrap
+SRCS = ClapTrap.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

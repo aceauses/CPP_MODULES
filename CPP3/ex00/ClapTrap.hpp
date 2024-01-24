@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 13:53:07 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/23 18:39:24 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/24 13:17:46 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/24 14:02:13 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
 # include <string>
 
-class Fixed
+class ClapTrap
 {
 	public:
 		// Constructors
-		Fixed();
-		Fixed(const int number);
-		Fixed(const float number);
-		Fixed(const Fixed &copy);
+		ClapTrap();
+		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap &copy);
+		
 		// Destructor
-		~Fixed();
+		~ClapTrap();
+		
 		// Operators
-		Fixed & operator=(const Fixed &assign);
-		float	toFloat(void) const;
-		int		toInt(void) const;
+		ClapTrap & operator=(const ClapTrap &assign);
+		void	attack(const std::string& target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 	private:
-		static const int	_bits = 8;
-		int					_number;
+		std::string _name;
+		int			_hitpoints;
+		int			_energy;
+		int			_attack;
 };
 
 #endif
