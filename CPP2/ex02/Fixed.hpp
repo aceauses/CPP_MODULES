@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:53:07 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/25 02:08:51 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:48:44 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ class Fixed
 		Fixed	operator++(int);
 		Fixed	&operator--(void);
 		Fixed	operator--(int);
+
+		static Fixed	&min(Fixed &a, Fixed &b);
+		static Fixed	&max(Fixed &a, Fixed &b);
+		static const Fixed	&min(const Fixed &a, const Fixed &b);
+		static const Fixed	&max(const Fixed &a, const Fixed &b);
 		
 	private:
 		static const int	_bits = 8;

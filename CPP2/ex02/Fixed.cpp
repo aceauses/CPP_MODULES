@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 22:20:24 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/25 02:08:42 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:47:55 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,34 @@ Fixed	Fixed::operator--(int)
 	Fixed tmp(*this);
 	operator--();
 	return tmp;
+}
+
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return a;
+	return b;
+}
+
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return a;
+	return b;
+}
+
+const Fixed	&Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return a;
+	return b;
+}
+
+const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return a;
+	return b;
 }
 
 std::ostream & operator<<(std::ostream &out, const Fixed &fixed)
