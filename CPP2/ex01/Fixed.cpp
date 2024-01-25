@@ -8,7 +8,7 @@ Fixed::Fixed()
 
 Fixed::Fixed(const Fixed &copy)
 {
-	this->_number = copy._number;
+	*this = copy;
 }
 
 Fixed::Fixed(const int number)
@@ -29,11 +29,34 @@ Fixed::~Fixed()
 // Operators
 Fixed & Fixed::operator=(const Fixed &assign)
 {
-	(void) assign;
+	if (this != &assign)
+		this->_number = assign.getRawBits();
 	return *this;
+}
+
+int Fixed::getRawBits(void) const
+{
+	std::cout << "\e[0;32mgetRawBits member function called\e[0m" << std::endl;
+	return this->_number;
+}
+
+void Fixed::setRawBits(int const value)
+{
+	this->_number = value;
 }
 
 float	Fixed::toFloat(void) const
 {
-	return (0);
+	return (float)this->_number / (1 << this->_bits);
+}
+
+int		Fixed::toInt(void) const
+{
+	return this->_number >> this->_bits;
+}
+
+std::ostream & operator<<(std::ostream &out, const Fixed &fixed)
+{
+	out << fixed.toFloat();
+	return out;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: aceauses <aceauses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:53:07 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/23 18:37:34 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/25 02:08:51 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <string>
+# include <ostream>
+# include <cmath>
 
 class Fixed
 {
@@ -22,18 +24,38 @@ class Fixed
 		// Constructors
 		Fixed();
 		Fixed(const Fixed &copy);
+		Fixed(const int number);
+		Fixed(const float number);
+		// Operators
+		Fixed & operator=(const Fixed &assign);
 		// Destructor
 		~Fixed();
 		// Operators
-		Fixed & operator=(const Fixed &assign);
-		Fixed & operator>>(const int shift);
-		Fixed & operator<<(const int shift);
-		Fixed & operator++(int);
-		Fixed & operator--(int);
+		int		getRawBits(void) const;
+		void	setRawBits(int const value);
 		float	toFloat(void) const;
 		int		toInt(void) const;
-	private:
-	
-};
 
+		bool	operator>(const Fixed &fixed) const;
+		bool	operator<(const Fixed &fixed) const;
+		bool	operator>=(const Fixed &fixed) const;
+		bool	operator<=(const Fixed &fixed) const;
+		bool	operator==(const Fixed &fixed) const;
+		bool	operator!=(const Fixed &fixed) const;
+		
+		Fixed	operator+(const Fixed &fixed) const;
+		Fixed	operator-(const Fixed &fixed) const;
+		Fixed	operator*(const Fixed &fixed) const;
+		Fixed	operator/(const Fixed &fixed) const;
+		
+		Fixed	&operator++(void);
+		Fixed	operator++(int);
+		Fixed	&operator--(void);
+		Fixed	operator--(int);
+		
+	private:
+		static const int	_bits = 8;
+		int					_number;
+};
+std::ostream & operator<<(std::ostream &out, const Fixed &fixed);
 #endif
