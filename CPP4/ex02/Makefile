@@ -6,14 +6,14 @@
 #    By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 15:11:36 by aceauses          #+#    #+#              #
-#    Updated: 2024/01/30 13:33:11 by aceauses         ###   ########.fr        #
+#    Updated: 2024/01/30 16:29:09 by aceauses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = sounds
-SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp
+NAME = brains
+SRCS = AAnimal.cpp Brain.cpp Cat.cpp Dog.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

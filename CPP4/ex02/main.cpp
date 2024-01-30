@@ -6,26 +6,37 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:55:28 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/30 15:21:32 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:30:43 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
+    // const int size = 10; // Change this to the desired size
+    // AAnimal* AAnimals[size];
+
+    // // Fill the array with Dog and Cat objects
+    // for (int i = 0; i < size / 2; ++i) {
+    //     AAnimals[i] = new Dog();
+    // }
+    // for (int i = size / 2; i < size; ++i) {
+    //     AAnimals[i] = new Cat();
+    // }
+	const AAnimal* meta = new Dog();
 	meta->makeSound();
-	delete meta;
-	delete j;
-	delete i;
-	return 0;
+	// Make the AAnimals make a sound
+	// for (int i = 0; i < size; ++i) {
+	// 	AAnimals[i]->makeSound();
+	// }
+
+    // Delete the AAnimals
+    // for (int i = 0; i < size; ++i) {
+    //     delete AAnimals[i];
+    // }
+
 }

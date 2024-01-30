@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 15:55:20 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/30 17:40:29 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/30 15:30:36 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/30 16:01:59 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "Animal.hpp"
 # include <iostream>
 # include <string>
 
-class Dog : public Animal
+class Brain
 {
 	public:
 		// Constructors
-		Dog();
-		Dog(const Dog &copy);
+		Brain();
+		Brain(const Brain &copy);
 		// Destructor
-		~Dog();
+		~Brain();
 		// Operators
-		Dog & operator=(const Dog &assign);
-		void makeSound() const;
+		Brain & operator=(const Brain &assign);
+	private:
+		std::string _ideas[100];
 };
 
 #endif

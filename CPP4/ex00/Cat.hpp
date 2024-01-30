@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:55:07 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/29 15:58:06 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/30 17:39:40 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,11 @@ class Cat : public Animal
 		// Constructors
 		Cat();
 		Cat(const Cat &copy);
-		
 		// Destructor
 		~Cat();
-		
 		// Operators
 		Cat & operator=(const Cat &assign);
-		
-	private:
-		
+		void makeSound() const;
 };
 
 #endif

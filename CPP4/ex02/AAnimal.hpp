@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   AAnimall.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 15:55:20 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/30 17:40:29 by aceauses         ###   ########.fr       */
+/*   Created: 2024/01/29 15:54:59 by aceauses          #+#    #+#             */
+/*   Updated: 2024/01/30 16:29:01 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef AAnimal_HPP
+# define AAnimal_HPP
 
-# include "Animal.hpp"
 # include <iostream>
 # include <string>
 
-class Dog : public Animal
+class AAnimal
 {
+	protected:
+		std::string _type;
 	public:
 		// Constructors
-		Dog();
-		Dog(const Dog &copy);
+		AAnimal();
+		AAnimal(std::string type);
+		AAnimal(const AAnimal &copy);
+		
 		// Destructor
-		~Dog();
+		virtual ~AAnimal();
 		// Operators
-		Dog & operator=(const Dog &assign);
-		void makeSound() const;
+		AAnimal & operator=(const AAnimal &assign);
+		// Public members
+		std::string getType() const;
+		std::string setType(std::string type);
+		virtual void makeSound() const = 0;
+	private:
+		
 };
 
 #endif

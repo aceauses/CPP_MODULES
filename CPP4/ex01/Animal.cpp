@@ -6,7 +6,7 @@
 /*   By: aceauses <aceauses@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:54:54 by aceauses          #+#    #+#             */
-/*   Updated: 2024/01/30 15:23:25 by aceauses         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:19:48 by aceauses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,11 @@ Animal::Animal(const Animal &copy)
 	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
 }
 
-
 // Destructor
 Animal::~Animal()
 {
 	std::cout << "\e[0;31mDestructor called of Animal\e[0m" << std::endl;
 }
-
 
 // Operators
 Animal & Animal::operator=(const Animal &assign)
@@ -46,7 +44,7 @@ Animal & Animal::operator=(const Animal &assign)
 
 void	Animal::makeSound() const
 {
-	std::cout << "\e[0;32mAnimal says: \"\"\e[0m" << std::endl;
+	std::cout << "\e[0;32mAnimal says: \e[0m" << std::endl;
 }
 
 std::string Animal::getType() const
